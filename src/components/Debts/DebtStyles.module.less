@@ -1,0 +1,160 @@
+.header {
+  width: 100vw;
+  background-color: #003055;
+  color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  label {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    padding: 20px 0 0 40px;
+
+    @media (min-width: 1080px) {
+      margin-left: 50px;
+    }
+  }
+
+  .searchInputContainer {
+    display: flex;
+    width: 100%;
+    padding: 0 0 40px 40px;
+    max-width: 600px;
+    position: relative;
+
+    @media (min-width: 1080px) {
+      margin-left: 50px;
+    }
+
+    button {
+      background-color: #e30221;
+      color: white;
+      border: none;
+      cursor: pointer;
+      max-width: 200px;
+      margin-right: 100px;
+
+      &:hover {
+        background-color: #c82333;
+      }
+    }
+
+    .searchInput {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+
+
+    .searchInputClearButton {
+      position: absolute;
+      top: 27%;
+      right: 110px;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-weight: bold;
+      color: #888;
+      padding: 0;
+      font-size: 16px;
+      &:hover {
+        background-color: unset;
+        color: #e30221;
+        font-size: larger;
+      }
+    }
+
+    .clearIcon {
+      width: 24px;
+    }
+  }
+}
+
+.debtTableContainer {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  table {
+    width: 90%;
+    border-collapse: collapse;
+    color: #003055;
+    font-weight: bold;
+    font-size: 0.9rem;
+
+    thead {
+
+      th {
+        padding: 10px;
+        cursor: pointer;
+        text-align: left;
+        font-size: 0.8rem;
+        color: #cbcbcb;
+
+        &:hover {
+          background-color: #f4f4f4;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding: 10px;
+          border-bottom: 1px solid #ddd;
+        }
+      }
+    }
+
+    @media screen and (max-width: 540px) {
+      display: none;
+    }
+  }
+
+  .debtCardsContainer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .debtCard {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    .cardItem {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      border-bottom: 1px solid #eee;
+      font-weight: bold;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      label {
+        color: #555;
+      }
+
+      span {
+        color: #003055;
+      }
+    }
+  }
+}
