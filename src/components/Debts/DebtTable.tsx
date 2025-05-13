@@ -33,7 +33,7 @@ const DebtTable = ({ data, loading: filteredDebtsLoading }: { data: Debt[] | nul
   );
 
   const renderTableRow = (debt: Debt) => (
-    <tr key={debt.NIP}>
+    <tr key={debt.Id}>
       <td>{debt.Name}</td>
       <td>{debt.NIP}</td>
       <td>{debt.Value}</td>
@@ -51,7 +51,7 @@ const DebtTable = ({ data, loading: filteredDebtsLoading }: { data: Debt[] | nul
   );
 
   const renderCard = (debt: Debt) => (
-    <div key={debt.NIP} className={DebtTableStyles.debtCard}>
+    <div key={debt.Id} className={DebtTableStyles.debtCard}>
       <div className={DebtTableStyles.cardItem}>
         <label>Dłużnik:</label> <span>{debt.Name}</span>
       </div>
