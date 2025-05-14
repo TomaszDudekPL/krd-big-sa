@@ -47,6 +47,7 @@ const DebtHeader = ({ setPhrase, setClickSearch }: {
         <input
           type="text"
           id="searchDebt"
+          name="input_search"
           placeholder="Minimum 3 znaki"
           value={searchQuery}
           onChange={handleSearchInputChange}
@@ -58,6 +59,7 @@ const DebtHeader = ({ setPhrase, setClickSearch }: {
 
         {searchQuery && (
           <button
+            name="clear"
             className={styles.searchInputClearButton}
             onClick={handleClear}
           >
@@ -71,7 +73,7 @@ const DebtHeader = ({ setPhrase, setClickSearch }: {
           </button>
         )}
 
-        <button onClick={handleSearch} disabled={!canSearch}
+        <button name="search" onClick={handleSearch} disabled={!canSearch}
                 className={!canSearch ? styles.disabledButton : ""}>SZUKAJ
         </button>
 
