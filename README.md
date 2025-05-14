@@ -1,5 +1,8 @@
 # Krajowy Rejestr Długów
 
+### Live demo
+[https://tomaszdudekpl.github.io/krd-big-sa/](https://tomaszdudekpl.github.io/krd-big-sa/)
+
 ## Wymagania do uruchomienia lokalnego
 
  - Zainstalowany NodeJs w wersji 22.15.0
