@@ -26,7 +26,7 @@ const Spinner = (props: SVGProps<SVGSVGElement>) => {
         strokeDasharray="200 1000"
         strokeLinecap="round"
         strokeWidth={18}
-        transformOrigin="center"
+        style={{ transformOrigin: "center" }}
       >
         <animateTransform
           attributeName="transform"
@@ -48,7 +48,7 @@ const Spinner = (props: SVGProps<SVGSVGElement>) => {
         strokeLinecap="round"
         strokeWidth={18}
         opacity={0.2}
-        transformOrigin="center"
+        style={{ transformOrigin: "center" }}
       />
     </svg>
   );

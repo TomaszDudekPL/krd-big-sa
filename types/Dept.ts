@@ -11,10 +11,6 @@ export interface Debt {
 }
 
 export interface ColumnSort {
-    column: keyof Debt | null;
-    direction: 'asc' | 'desc' | null;
-}
-
-export interface DebtTableProps {
-  topDebtsData: Debt[];
+    column: keyof Debt;
+    direction: 'asc' | 'desc';
 }
