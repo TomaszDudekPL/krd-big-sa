@@ -37,6 +37,8 @@ const DebtHeader = ({ setPhrase, setClickSearch }: {
     }
   }, []);
 
+  const canSearch = searchQuery.length >= 3;
+
   return (
     <div className={styles.header}>
 
@@ -45,13 +47,15 @@ const DebtHeader = ({ setPhrase, setClickSearch }: {
         <input
           type="text"
           id="searchDebt"
-          placeholder="Wpisz NIP lub nazwę"
+          placeholder="Minimum 3 znaki"
           value={searchQuery}
           onChange={handleSearchInputChange}
-          onKeyDown={handleKeyDown}
+          onKeyDown={canSearch ? handleKeyDown : () => {
+          }}
           ref={inputRef}
           className={styles.searchInput}
         />
+
         {searchQuery && (
           <button
             className={styles.searchInputClearButton}
@@ -66,7 +70,11 @@ const DebtHeader = ({ setPhrase, setClickSearch }: {
             </div>
           </button>
         )}
-        <button onClick={handleSearch}>SZUKAJ</button>
+
+        <button onClick={handleSearch} disabled={!canSearch}
+                className={!canSearch ? styles.disabledButton : ""}>SZUKAJ
+        </button>
+
       </div>
     </div>
   );
